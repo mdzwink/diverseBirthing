@@ -13,6 +13,7 @@ import Contact from './components/Contact';
 import HealthcareProfessional from './components/HealthcareProfessional';
 import FamilyPlanning from './components/FamilyPlanning';
 import Expecting from './components/Expecting';
+import LanguageSelection from './components/LanguageSelection';
 
 const router = createBrowserRouter([
   {
