@@ -1,0 +1,22 @@
+
+section.healthcare-professional {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  background-image: url('https://media.gettyimages.com/id/1171128932/photo/doctor-holding-patients-hand-before-surgery.jpg?s=612x612&w=gi&k=20&c=8hIX1JqXc5eQM-piv6Nk-TxpQvwq-HOqu1067nCe_KY=');
+  background-position: center;
+  background-size: cover;
+  opacity: .7;
+}
+
+section.healthcare-professional > h1 {
+  background-color: var(--puce);
+  color: var(--blue);
+  padding: 2em;
+  font-size: 3em;
+  font-weight: 700;
+  transition: background-color 500ms;
+}

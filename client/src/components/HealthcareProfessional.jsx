@@ -1,6 +1,10 @@
+import './HealthcareProfessional.css';
+
 const HealthcareProfessional = () => {
   return (
-    <h1 className='placeholder'>Healthcare Professional</h1>
+    <section className="healthcare-professional">
+      <h1 className='placeholder'>Healthcare Professional</h1>
+    </section>
   )
 }
 

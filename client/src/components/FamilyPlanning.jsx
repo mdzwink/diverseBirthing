@@ -1,6 +1,10 @@
+import './FamilyPlanning.css';
+
 const FamilyPlanning = () => {
   return (
-    <h1 className='placeholder'>Family Planning</h1>
+    <section className='family-planning' >
+      <h1 className='placeholder'>Family planning</h1>
+    </section>
   )
 }
 

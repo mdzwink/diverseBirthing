@@ -1,6 +1,10 @@
+import './Expecting.css';
+
 const Expecting = () => {
   return (
-    <h1 className='placeholder'>Expecting</h1>
+    <section className='expecting' >
+      <h1 className='placeholder'>Expecting</h1>
+    </section>
   )
 }
 
