@@ -13,7 +13,7 @@ header.nav {
   padding: 0 3em;
   background-color: var(--nav-bckgrnd);
   z-index: 1000;
-  color: rgba(240, 255, 255, 0.9);
+  color: rgba(240, 255, 255, 0.616);
 }
 
 header nav {
@@ -47,7 +47,16 @@ header nav ul {
   text-transform: capitalize;
 }
 
-header nav ul > li {
+header nav ul > a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: rgb(192, 200, 200);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+header nav ul li {
   font-weight: 600;
   width: 100%;
   height: 100%;
@@ -56,17 +65,10 @@ header nav ul > li {
   align-items: center;
   font-size: 1.3em;
   transition: color 300ms, background-color 300ms;
+  padding: 0 1em;
 }
-header nav ul > li:hover {
+header nav ul li:hover {
   background-color: var(--space-cadet);
   color: azure;
-}
-
-header nav ul li > a {
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: azure;
-  padding: 0 3em;
-  text-align: center;
+  cursor: pointer;
 }

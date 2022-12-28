@@ -75,7 +75,7 @@ section.home-filter {
   font-weight: 600;
   font-size: x-large;
 }
-section.home-filter > div {
+section.home-filter a > div {
   width: 33.333vw;
   height: 100vh;
   display: flex;

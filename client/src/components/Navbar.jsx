@@ -14,9 +14,9 @@ const Navbar = (props) => {
         <nav>
           <h1 className="nav-logo">DB</h1>
           <ul>
-            <li><Link to={'/'} >{language.navbar.home}</Link></li>
-            <li><Link to={'/about'}>{language.navbar.about}</Link></li>
-            <li><Link to={'/contact'}>{language.navbar.contact}</Link></li>
+            <Link to={'/'} ><li>{language.navbar.home}</li></Link>
+            <Link to={'/about'} ><li>{language.navbar.about}</li></Link>
+            <Link to={'/contact'} ><li>{language.navbar.contact}</li></Link>
             <li onClick={() => handleLanguageClick()}>{language.navbar.languages}</li>
           </ul>
         </nav>

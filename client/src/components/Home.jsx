@@ -4,19 +4,21 @@ const Home = (props) => {
   const { language } = props;
   return (
     <section className="home-filter" >
-      <div className="family-planning-selector">
-        <Link to={'/family-planning'}><div>Family Planning</div></Link>
-      </div>
-      <div className="expecting-selector">
-        <Link to={'/expecting'}>
+      <Link to={'/family-planning'}>
+        <div className="family-planning-selector">
+          <div>Family Planning</div>
+        </div>
+      </Link>
+      <Link to={'/expecting'}>
+        <div className="expecting-selector">
           <div>Expecting</div>
-        </Link>
-      </div>
-      <div className="healthcare-professional-selector">
-        <Link to={'/healthcare-professional'}>
+        </div>
+      </Link>
+      <Link to={'/healthcare-professional'}>
+        <div className="healthcare-professional-selector">
           <div>Healthcare Professional</div>
-        </Link>
-      </div>
+        </div>
+      </Link>
     </section>
   )
 }

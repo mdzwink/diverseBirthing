@@ -44,7 +44,7 @@ function App() {
         healthcareProfessional: 'Healthcare Professional'
       }
     },
-    'spanish': {
+    "spanish": {
       navbar: {
         home: 'home',
         about: 'about',
@@ -58,6 +58,8 @@ function App() {
       }
     },
   }
+
+  console.log('library',library)
 
   const [languageSelector, setLanguageSelector] = useState('true')
   const [language, setLanguage] = useState(library.english);
