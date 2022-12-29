@@ -1,22 +1,27 @@
-import { Link } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
+import library from "../LanguageLib";
 
-const Home = (props) => {
-  const { language } = props;
+const Home = () => {
+
+  const [language] = useOutletContext();
+
+  console.log('language in home', library[language])
+
   return (
     <section className="home-filter" >
       <Link to={'/family-planning'}>
         <div className="family-planning-selector">
-          <div>Family Planning</div>
+          <div>{library[language].home.familyPlanning}</div>
         </div>
       </Link>
       <Link to={'/expecting'}>
         <div className="expecting-selector">
-          <div>Expecting</div>
+          <div>{library[language].home.expecting}</div>
         </div>
       </Link>
       <Link to={'/healthcare-professional'}>
         <div className="healthcare-professional-selector">
-          <div>Healthcare Professional</div>
+          <div>{library[language].home.healthcareProfessional}</div>
         </div>
       </Link>
     </section>

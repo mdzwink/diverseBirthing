@@ -65,7 +65,7 @@ header nav ul li {
   align-items: center;
   font-size: 1.3em;
   transition: color 300ms, background-color 300ms;
-  padding: 0 1em;
+  padding: 0 2em;
 }
 header nav ul li:hover {
   background-color: var(--space-cadet);
