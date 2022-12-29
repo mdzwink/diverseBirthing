@@ -4,7 +4,17 @@
   --blue: #7D98A1;
   --mauve: #592941;
   --space-cadet: #392F5A;
-  --nav-bckgrnd: var(--mauve);
+
+  --sage: #C9CBA3;
+  --peach: #FFE1A8;
+  --terra-cotta: #E26D5C;
+  --catawba: #723D46;
+  --old-burgandy: #472D30;
+  --nav-bkgrnd: var(--sage);
+  --nav-hvr-bkgrnd: var(--terra-cotta);
+  --nav-text: var(--catawba);
+  --nav-hvr-text: var(--old-burgandy);
+  --logo-bkgrnd: var(--terra-cotta)
 }
 
 *{
@@ -80,7 +90,7 @@ section.language-selection > div {
 }
 @media screen and (max-width: 850px) {
   section.language-selection > div {
-
+    
   }
 }
 section.language-selection > div:hover {
@@ -136,7 +146,7 @@ section.home-filter > div:hover {
   opacity: .8;
 }
 section div div {
-  background-color: var(--nav-bckgrnd);
+  background-color: var(--nav-bkgrnd);
   color: azure;
   padding: .5em;
   border-radius: 3px;

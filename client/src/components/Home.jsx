@@ -5,8 +5,6 @@ const Home = () => {
 
   const [language] = useOutletContext();
 
-  console.log('language in home', library[language])
-
   return (
     <section className="home-filter" >
       <Link to={'/family-planning'}>

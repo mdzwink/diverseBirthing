@@ -5,7 +5,6 @@ const LanguageSelection = (props) => {
   const handleLanguageClick = (selectedLanguage) => {
     // set language state to 'selectedLanguage'
     setLanguage(selectedLanguage);
-    console.log('language selected', selectedLanguage);
     setLanguageSelector(false);
   }
 

@@ -11,9 +11,9 @@ header.nav {
   align-items: center;
   box-shadow: 0px 1px 7px rgb(10, 10, 10, .6);
   padding: 0 3em;
-  background-color: var(--nav-bckgrnd);
+  background-color: var(--nav-bkgrnd);
   z-index: 1000;
-  color: rgba(240, 255, 255, 0.616);
+  color: var(--nav-text);
 }
 
 header nav {
@@ -25,14 +25,36 @@ header nav {
   align-items: center;
 }
 
+header nav {
+  text-decoration: none;
+}
+
 header nav .nav-logo {
   width: 2em;
   height: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--space-cadet);
+  background-color: var(--logo-bkgrnd);
   padding: 1.5em;
+  color: var(--nav-hvr-text);
+}
+header nav .nav-logo:hover {
+  color: #332123;
+}
+
+header nav button.menu-button {
+  display: none;
+  width: 2em;
+  height: 2em;
+  padding: 1.5em;
+  background-color: transparent;
+  border: none;
+  transition: background-color 300ms;
+}
+header nav button.menu-button:hover {
+  background-color: var(--terra-cotta);
+  cursor: pointer;
 }
 
 header nav ul {
@@ -51,7 +73,7 @@ header nav ul > a {
   width: 100%;
   height: 100%;
   text-decoration: none;
-  color: rgb(192, 200, 200);
+  color: var(--nav-text);
   text-align: center;
   text-transform: capitalize;
 }
@@ -63,12 +85,36 @@ header nav ul li {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.3em;
+  font-size: clamp(1.2em, 2.3vw, 25px);
   transition: color 300ms, background-color 300ms;
   padding: 0 2em;
 }
 header nav ul li:hover {
-  background-color: var(--space-cadet);
-  color: azure;
+  background-color: var(--nav-hvr-bkgrnd);
+  color: var(--nav-hvr-text);
   cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  header nav ul{
+    display: none;
+  }
+  header nav button.menu-button {
+    display: block;
+  }
+
+  header nav ul.menu-active {
+    position: absolute;
+    top: 15vh;
+    right: 0;
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    background-color: var(--nav-bkgrnd);
+  }
+
 }
