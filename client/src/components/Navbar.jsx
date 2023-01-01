@@ -17,14 +17,16 @@ const Navbar = (props) => {
   return (
     <header className="nav">
         <nav>
-        <Link to={'/'}><h1 className="nav-logo">BD</h1></Link>
+          <Link to={'/'}><h1 className="nav-logo">BD</h1></Link>
           <ul className={navMenu ? 'menu-active' : 'menu-not-active'} >
             <Link to={'/'} onClick={() => handleMenuButtonClick()} ><li>{library[language].navbar.home}</li></Link>
             <Link to={'/about'} onClick={() => handleMenuButtonClick()} ><li>{library[language].navbar.about}</li></Link>
             <Link to={'/contact'} onClick={() => handleMenuButtonClick()} ><li>{library[language].navbar.contact}</li></Link>
             <li onClick={() => handleLanguageClick()}>{library[language].navbar.languages}</li>
           </ul>
-          <button className="menu-button" onClick={() => handleMenuButtonClick()} >=</button>
+          <ul className="menu-button" >
+            <li onClick={() => handleMenuButtonClick()}>{library[language].navbar.menu}</li>
+          </ul>
         </nav>
         {languageSelector ?
           <LanguageSelection setLanguageSelector={setLanguageSelector} setLanguage={setLanguage} />

@@ -11,6 +11,7 @@ const LanguageSelection = (props) => {
   return (
     <section className="language-selection">
         <div onClick={() => handleLanguageClick('english')} ><h1>I speak English</h1></div>
+        <div onClick={() => handleLanguageClick('french')} ><h1>je parle français</h1></div>
         <div onClick={() => handleLanguageClick('urdu')}><h1>میں اردو بولتا ہوں۔</h1></div>
         <div onClick={() => handleLanguageClick('portugese')}><h1>eu falo português</h1></div>
         <div onClick={() => handleLanguageClick('spanish')}><h1>yo hablo español</h1></div>

@@ -22,6 +22,11 @@ const Home = () => {
           <div>{library[language].home.healthcareProfessional}</div>
         </div>
       </Link>
+      <Link to={'/map'}>
+        <div className="map-selector">
+          <div>{library[language].home.map}</div>
+        </div>
+      </Link>
     </section>
   )
 }

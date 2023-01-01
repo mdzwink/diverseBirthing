@@ -5,15 +5,19 @@ header.nav {
   width: 100vw;
   max-width: 100%;
   height: 15vh;
-  max-height: 9em;
+  transition: height 200ms;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 1px 7px rgb(10, 10, 10, .6);
   padding: 0 3em;
   background-color: var(--nav-bkgrnd);
   z-index: 1000;
   color: var(--nav-text);
+}
+@media screen and (min-height: 800px) {
+  header.nav {
+    height: 13vh;
+  }
 }
 
 header nav {
@@ -30,8 +34,8 @@ header nav {
 }
 
 header nav .nav-logo {
-  width: 2em;
-  height: 2em;
+  width: 10vh;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,18 +47,11 @@ header nav .nav-logo:hover {
   color: #332123;
 }
 
-header nav button.menu-button {
+header nav ul.menu-button {
   display: none;
-  width: 2em;
-  height: 2em;
-  padding: 1.5em;
-  background-color: transparent;
-  border: none;
-  transition: background-color 300ms;
-}
-header nav button.menu-button:hover {
-  background-color: var(--terra-cotta);
-  cursor: pointer;
+  width: 10vh;
+  height: 10vh;
+  margin-right: 1.5em;
 }
 
 header nav ul {
@@ -96,10 +93,10 @@ header nav ul li:hover {
 }
 
 @media screen and (max-width: 700px) {
-  header nav ul{
+  header nav ul.menu-not-active{
     display: none;
   }
-  header nav button.menu-button {
+  header nav ul.menu-button {
     display: block;
   }
 
