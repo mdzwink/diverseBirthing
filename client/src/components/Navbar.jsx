@@ -22,6 +22,7 @@ const Navbar = (props) => {
             <Link to={'/'} onClick={() => handleMenuButtonClick()} ><li>{library[language].navbar.home}</li></Link>
             <Link to={'/about'} onClick={() => handleMenuButtonClick()} ><li>{library[language].navbar.about}</li></Link>
             <Link to={'/contact'} onClick={() => handleMenuButtonClick()} ><li>{library[language].navbar.contact}</li></Link>
+            <Link to={'/map'} onClick={() => handleMenuButtonClick()} ><li>{library[language].navbar.map}</li></Link>
             <li onClick={() => handleLanguageClick()}>{library[language].navbar.languages}</li>
           </ul>
           <ul className="menu-button" >

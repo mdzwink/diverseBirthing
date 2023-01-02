@@ -5,7 +5,8 @@ const library = {
       about: 'about',
       contact: 'contact',
       languages: 'languages',
-      menu: 'menu'
+      menu: 'menu',
+      map: 'map',
     },
     home: {
       familyPlanning: 'Family Planning',
@@ -20,7 +21,8 @@ const library = {
       about: 'کے بارے میں',
       contact: 'سوالات',
       languages: 'زبانیں',
-      menu: 'مینو'
+      menu: 'مینو',
+      map: 'نقشہ',
     },
     home: {
       familyPlanning: 'خاندانی منصوبہ',
@@ -35,7 +37,8 @@ const library = {
       about: 'about',
       contact: 'contact',
       languages: 'languages',
-      menu: 'menu'
+      menu: 'menu',
+      map: 'map',
     },
     home: {
       familyPlanning: 'Family Planning',
@@ -50,7 +53,8 @@ const library = {
       about: 'about',
       contact: 'contact',
       languages: 'languages',
-      menu: 'menu'
+      menu: 'menu',
+      map: 'map',
     },
     home: {
       familyPlanning: 'Family Planning',
@@ -65,7 +69,8 @@ const library = {
       about: 'about',
       contact: 'contact',
       languages: 'languages',
-      menu: 'menu'
+      menu: 'menu',
+      map: 'map',
     },
     home: {
       familyPlanning: 'Family Planning',
@@ -80,7 +85,8 @@ const library = {
       about: 'about',
       contact: 'contact',
       languages: 'languages',
-      menu: 'menu'
+      menu: 'menu',
+      map: 'map',
     },
     home: {
       familyPlanning: 'Family Planning',
@@ -95,7 +101,8 @@ const library = {
       about: 'about',
       contact: 'contact',
       languages: 'languages',
-      menu: 'menu'
+      menu: 'menu',
+      map: 'map',
     },
     home: {
       familyPlanning: 'Family Planning',
@@ -110,7 +117,8 @@ const library = {
       about: 'sur',
       contact: 'contactez',
       languages: 'langue',
-      menu: 'menu'
+      menu: 'menu',
+      map: 'carte',
     },
     home: {
       familyPlanning: 'planification familiale',

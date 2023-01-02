@@ -13,6 +13,7 @@ import Contact from './components/Contact';
 import HealthcareProfessional from './components/HealthcareProfessional';
 import FamilyPlanning from './components/FamilyPlanning';
 import Expecting from './components/Expecting';
+import LocationsMap from './components/LocationsMap'
 
 const router = createBrowserRouter([
   {
@@ -40,8 +41,12 @@ const router = createBrowserRouter([
         element: <FamilyPlanning />
       },
       {
-        path: 'Expecting',
+        path: 'expecting',
         element: <Expecting />
+      },
+      {
+        path: 'map',
+        element: <LocationsMap />
       },
     ]
   },
