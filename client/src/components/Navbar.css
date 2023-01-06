@@ -34,13 +34,13 @@ header nav {
 }
 
 header nav .nav-logo {
-  width: 10vh;
+  width: auto;
   height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--logo-bkgrnd);
-  padding: 1.5em;
+  padding: 1em;
   color: var(--nav-hvr-text);
 }
 header nav .nav-logo:hover {
@@ -83,12 +83,12 @@ header nav ul li {
   justify-content: center;
   align-items: center;
   font-size: clamp(1.2em, 2.3vw, 25px);
-  transition: color 300ms, background-color 300ms;
+  border-bottom: solid .3em transparent;
+  transition: border-bottom 300ms;
   padding: 0 2em;
 }
 header nav ul li:hover {
-  background-color: var(--nav-hvr-bkgrnd);
-  color: var(--nav-hvr-text);
+  border-bottom: solid .3em var(--nav-bkgrnd-hvr);
   cursor: pointer;
 }
 

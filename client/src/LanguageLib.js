@@ -2,7 +2,7 @@ const library = {
   'english': {
     navbar: {
       home: 'home',
-      about: 'about',
+      ourTeam: 'our team',
       contact: 'contact',
       languages: 'languages',
       menu: 'menu',
@@ -18,7 +18,7 @@ const library = {
   'urdu': {
     navbar: {
       home: 'گھر',
-      about: 'کے بارے میں',
+      ourTeam: 'ہماری ٹیم',
       contact: 'سوالات',
       languages: 'زبانیں',
       menu: 'مینو',
@@ -34,7 +34,7 @@ const library = {
   'portugise': {
     navbar: {
       home: 'home',
-      about: 'about',
+      ourTeam: 'ourTeam',
       contact: 'contact',
       languages: 'languages',
       menu: 'menu',
@@ -50,7 +50,7 @@ const library = {
   "spanish": {
     navbar: {
       home: 'home',
-      about: 'about',
+      ourTeam: 'ourTeam',
       contact: 'contact',
       languages: 'languages',
       menu: 'menu',
@@ -66,7 +66,7 @@ const library = {
   "somali": {
     navbar: {
       home: 'home',
-      about: 'about',
+      ourTeam: 'ourTeam',
       contact: 'contact',
       languages: 'languages',
       menu: 'menu',
@@ -82,7 +82,7 @@ const library = {
   "ukrainian": {
     navbar: {
       home: 'home',
-      about: 'about',
+      ourTeam: 'ourTeam',
       contact: 'contact',
       languages: 'languages',
       menu: 'menu',
@@ -98,7 +98,7 @@ const library = {
   "russian": {
     navbar: {
       home: 'home',
-      about: 'about',
+      ourTeam: 'ourTeam',
       contact: 'contact',
       languages: 'languages',
       menu: 'menu',
@@ -114,7 +114,7 @@ const library = {
   "french": {
     navbar: {
       home: 'maison',
-      about: 'sur',
+      ourTeam: 'notre équipe',
       contact: 'contactez',
       languages: 'langue',
       menu: 'menu',

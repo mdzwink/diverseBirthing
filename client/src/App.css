@@ -10,11 +10,15 @@
   --terra-cotta: #E26D5C;
   --catawba: #723D46;
   --old-burgandy: #472D30;
-  --nav-bkgrnd: var(--sage);
-  --nav-hvr-bkgrnd: var(--terra-cotta);
+  --nav-bkgrnd: rgb(20,20,20,.01);
+  --nav-bkgrnd-hvr: #86dafb;
   --nav-text: var(--catawba);
   --nav-hvr-text: var(--old-burgandy);
-  --logo-bkgrnd: var(--terra-cotta)
+  --logo-bkgrnd: #fdc143;
+  --lang-selection: white;
+  --lang-selection-hvr: #c894c2;
+  --home-section-select: white;
+  --home-section-select-hvr: #c894c2;
 }
 
 *{
@@ -40,7 +44,23 @@ header.error-page {
 .link {
   text-decoration: none;
 }
+
 /* Navbar css in 'Navbar.css' */
+
+.back-to-top {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  background-color: #86dafb;
+  padding: .4em;
+  cursor: pointer;
+}
+.back-to-top:hover {
+  box-shadow: 1px 2px 7px rgb(20, 20, 20, .6);
+}
 
 section.language-selection {
   position: fixed;
@@ -49,12 +69,13 @@ section.language-selection {
   width: 100vw;
   max-width: 100%;
   height: 100vh;
-  background-color: var(--apricot);
+  background-color: var(--lang-selection);
   z-index: 1001;
   display: grid;
   grid-template-columns: 25vw 25vw 25vw 25vw;
   grid-template-rows: 50vh;
   text-transform: capitalize;
+
 }
 @media screen and (max-width: 900px) {
   section.language-selection {
@@ -85,22 +106,57 @@ section.language-selection > div {
   padding: .5em;
   text-align: center;
   font-size: 2vw;
-  color: var(--space-cadet);
+  color: rgb(20, 20, 20, .8);
   transition: background-color 400ms;
 }
 section.language-selection > div:hover {
-  background-color: var(--puce);
+  background-color: var(--lang-selection-hvr);
 }
 section.language-selection div.link {
   text-decoration: none;
 }
 
+h1.home-languagePage-toggle {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  width: auto;
+  height: auto;
+  font-size: larger;
+  background-color: var(--logo-bkgrnd);
+  padding: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: .7;
+}
+h1.home-languagePage-toggle:hover {
+  box-shadow: 1px 3px 7px rgb(20, 20, 20, .6);
+  opacity: .9;
+}
+
+a.home-logo {
+  position: fixed;
+  top: 2em;
+  left: 2em;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdc143;
+  padding: 1em;
+  color: var(--nav-hvr-text);
+  cursor: default;
+  z-index: 500;
+}
+
 section.home-filter {
   position: relative;
-  top: 15vh;
+  top: 0;
+  left: 0;
   width: 100vw;
   max-width: 100%;
-  height: 85vh;
+  height: 100vh;
   transition: height 200ms;
   display: flex;
   flex-direction: row;
@@ -111,16 +167,15 @@ section.home-filter {
   text-transform: capitalize;
 }
 section.home-filter a > div {
-  width: 25vw;
+  width: 33.333vw;
   overflow: hidden;
-  height: 85vh;
+  height: 100vh;
   transition: height 200ms;
   display: flex;
   justify-content: center;
   align-items: center;
   background-position: center;
   background-size: cover;
-  opacity: .6;
   padding: 2em;
   color: var(--space-cadet);
   transition: opacity 300ms;
@@ -146,38 +201,49 @@ section.home-filter a > div {
   }
 }
 section.home-filter > div:hover {
-  opacity: .8;
+
 }
 
+
 .healthcare-professional-selector {
-  background-image: url('https://media.gettyimages.com/id/1171128932/photo/doctor-holding-patients-hand-before-surgery.jpg?s=612x612&w=gi&k=20&c=8hIX1JqXc5eQM-piv6Nk-TxpQvwq-HOqu1067nCe_KY=');
+  background-color: var(--home-section-select);
+  transition: background-color 300ms;
+  opacity: .3;
 }
 .healthcare-professional-selector:hover {
-  opacity: .8;
+  background-color: var(--home-section-select-hvr);
 }
 .expecting-selector {
-  background-image: url('https://st2.depositphotos.com/1854227/5818/i/450/depositphotos_58185125-stock-photo-beautiful-pregnant-woman-in-white.jpg');
+  background-color: var(--home-section-select);
+  transition: background-color 300ms;
+  opacity: .3;
 }
 .expecting-selector:hover {
-  opacity: .8;
+  background-color: var(--home-section-select-hvr);
 }
 .family-planning-selector {
-  background-image: url('https://st4.depositphotos.com/1017986/19983/i/450/depositphotos_199836278-stock-photo-female-hands-with-paper-family.jpg');
+  background-color: var(--home-section-select);
+  transition: background-color 300ms;
+  opacity: .3;
 }
 .family-planning-selector:hover {
-  opacity: .8;
+  background-color: var(--home-section-select-hvr);
 }
 .map-selector {
-  background-image: url('https://images.unsplash.com/photo-1519885277449-12eee5564d68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80');
+  background-color: var(--home-section-select);
+  transition: background-color 300ms;
+  opacity: .3;
 }
 .map-selector:hover {
-  opacity: .8;
+  background-color: var(--home-section-select-hvr);
 }
 section div div {
   background-color: var(--nav-bkgrnd);
-  color: azure;
+  color: rgb(20, 20, 20, .8);
   border-radius: 3px;
-  box-shadow: 0 2px 7px rgb(20, 20, 20, .6);
+  box-shadow: 1px 3px 7px rgb(20, 20, 20, .6);
+  padding: .5em;
+  text-align: center;
 }
 
 section h1.placeholder {
@@ -191,4 +257,22 @@ section.map {
   max-width: 100%;
   height: 85vh;
   padding: .5em;
+}
+
+section.footer {
+  width: 100vw;
+  max-width: 100%;
+  height: auto;
+  min-height: 5px;
+  background-color: #392F5A;
+  color: white;
+  padding: .5em 5vw;
+  display: grid;
+  grid-template-columns: 30vw 30vw 30vw;
+  grid-template-rows: auto;
+  text-align: center;
+}
+section.footer > div:hover {
+  cursor: pointer;
+  color: #fdc143;
 }
