@@ -10,13 +10,25 @@
   --terra-cotta: #E26D5C;
   --catawba: #723D46;
   --old-burgandy: #472D30;
+
+  /* color pallet */
+  --bd-orange: #e05c1b;
+  --bd-light-blue: #86dafb;
+  --bd-blue: #204cc4;
+  --bd-purple-img: #ad9dbe;
+  --bd-purple: #a65f8e;
+  --bd-light-purple: #c894c2;
+  --bd-green: #3f714d;
+
+  --h1: var(--bd-purple);
+  --article: rgb(10,10,10);
   --nav-bkgrnd: rgb(20,20,20,.01);
-  --nav-bkgrnd-hvr: #86dafb;
-  --nav-text: var(--catawba);
-  --nav-hvr-text: var(--old-burgandy);
+  --nav-bkgrnd-hvr: var(--bd-purple);
+  --nav-text: var(--bd-purple);
+  --nav-hvr-text: black;
   --logo-bkgrnd: #fdc143;
   --lang-selection: white;
-  --lang-selection-hvr: #c894c2;
+  --lang-selection-hvr: var(--bd-purple-img);
   --home-section-select: white;
   --home-section-select-hvr: #c894c2;
 }
@@ -41,6 +53,38 @@ header.error-page {
   height: 100vh;
 }
 
+div.intro-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  background-color: black;
+  animation: intro 3s forwards;
+}
+div.intro-animation .first-part {
+  animation: 1s first-part 1s ease-in-out 500ms 1 forwards forwards;
+}
+div.intro-animation .second-part {
+  animation: 3s ease-in 1s 2 reverse both paused slidein;
+}
+
+@keyframes intro {
+  from {
+    background-color: black;
+  }
+
+  95% {
+    background-color: transparent;
+
+  }
+
+  to {
+    display: none;
+  }
+}
+
 .link {
   text-decoration: none;
 }
@@ -54,12 +98,14 @@ header.error-page {
   width: auto;
   height: auto;
   border-radius: 10px;
-  background-color: #86dafb;
+  background-color: #9db7d6;
   padding: .4em;
   cursor: pointer;
+  user-select: none;
 }
 .back-to-top:hover {
   box-shadow: 1px 2px 7px rgb(20, 20, 20, .6);
+  background-color: #9db7d6;
 }
 
 section.language-selection {
@@ -75,25 +121,7 @@ section.language-selection {
   grid-template-columns: 25vw 25vw 25vw 25vw;
   grid-template-rows: 50vh;
   text-transform: capitalize;
-
-}
-@media screen and (max-width: 900px) {
-  section.language-selection {
-    grid-template-columns: 33.333vw 33.333vw 33.333vw;
-    grid-template-rows: 33.333vh 33.333vh 33.333vh ;
-  }
-}
-@media screen and (max-width: 650px) {
-  section.language-selection {
-    grid-template-columns: 50vw 50vw;
-    grid-template-rows: auto ;
-  }
-}
-@media screen and (max-width: 450px) {
-  section.language-selection {
-    grid-template-columns: 100vw;
-    grid-template-rows: auto ;
-  }
+  padding: 1em;
 }
 
 section.language-selection > div {
@@ -103,17 +131,49 @@ section.language-selection > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: .5em;
+  padding: 1em;
   text-align: center;
-  font-size: 2vw;
-  color: rgb(20, 20, 20, .8);
+  font-size: 1em;
+  color: black;
   transition: background-color 400ms;
 }
+
 section.language-selection > div:hover {
   background-color: var(--lang-selection-hvr);
 }
 section.language-selection div.link {
   text-decoration: none;
+}
+section.language-selection div strong {
+  color: var(--bd-purple);
+}
+
+@media screen and (max-width: 900px) {
+  section.language-selection {
+    grid-template-columns: 33.333vw 33.333vw 33.333vw;
+    grid-template-rows: 33.333vh 33.333vh 33.333vh ;
+  }
+  section.language-selection > div {
+    font-size: .9em;
+  }
+}
+@media screen and (max-width: 650px) {
+  section.language-selection {
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: auto ;
+  }
+  section.language-selection > div {
+    font-size: .8em;
+  }
+}
+@media screen and (max-width: 450px) {
+  section.language-selection {
+    grid-template-columns: 100vw;
+    grid-template-rows: auto ;
+  }
+  section.language-selection > div {
+    font-size: .6em;
+  }
 }
 
 h1.home-languagePage-toggle {
@@ -122,6 +182,9 @@ h1.home-languagePage-toggle {
   right: 1em;
   width: auto;
   height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: larger;
   background-color: var(--logo-bkgrnd);
   padding: 1em;
@@ -138,110 +201,121 @@ a.home-logo {
   position: fixed;
   top: 2em;
   left: 2em;
-  width: auto;
-  height: auto;
+  width: 100px;
+  height: 60px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fdc143;
-  padding: 1em;
-  color: var(--nav-hvr-text);
   cursor: default;
   z-index: 500;
 }
 
 section.home-filter {
-  position: relative;
-  top: 0;
-  left: 0;
   width: 100vw;
   max-width: 100%;
   height: 100vh;
-  transition: height 200ms;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   font-weight: 600;
-  font-size: x-large;
+  font-size: 1.5em;
   text-transform: capitalize;
 }
-section.home-filter a > div {
+section.home-filter a {
   width: 33.333vw;
   overflow: hidden;
   height: 100vh;
   transition: height 200ms;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 6em .5em 6em .5em;
+  color: black;
+  opacity: .8;
+  transition: opacity 200ms;
+  text-align: center;
+}
+section.home-filter a > div {
+  width: 100%;
+  height: 50vh;
   background-position: center;
-  background-size: cover;
-  padding: 2em;
-  color: var(--space-cadet);
-  transition: opacity 300ms;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-@media screen and (min-height: 800px) {
-  section.home-filter {
-    top: 13vh;
-    height: 87vh;
-  }
-  section.home-filter a > div {
-    height: 87vh;
+section.home-filter a > h1 {
+  font-size: 1.2em;
+}
+section.home-filter > a:hover {
+  background-color: beige;
+  opacity: .9;
+}
+#postpartum-background {
+  background-size: 70%;
+  background-position: 50% 42%;
+}
+@media screen and (max-width: 1000px) {
+  section.home-filter a > h1 {
+    font-size: .9em;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) and (min-height: 700px),
+       screen and (max-width: 550px) {
   section.home-filter {
     flex-direction: column;
-    height: 85vh;
   }
-  section.home-filter a > div {
+  section.home-filter a {
     width: 100vw;
     max-width: 100%;
-    height: 21.25vh;
+    height: 33.33vh;
+    padding: 0;
+  }
+  section.home-filter a > div {
+    background-position: center;
+    background-size: contain;
+  }
+  section.home-filter a > h1 {
+    position: absolute;
+    font-size: .7em;
+    background-color: #3f714dbb;
+    padding: .4em;
+    border-radius: 5px;
+    color: #efefef;
+  }
+  h1.home-languagePage-toggle {
+    bottom: .5em;
+    width: 100px;
+    height: auto;
+    font-size: 1em;
+    padding: .4em;
   }
 }
-section.home-filter > div:hover {
-
+@media screen and (max-width: 350px) {
+  h1.home-languagePage-toggle {
+    right: .5em;
+    width: 70px;
+    height: 70px;
+    font-size: .6em;
+    text-align: center;
+    border-radius: 50%;
+  }
 }
 
 
-.healthcare-professional-selector {
-  background-color: var(--home-section-select);
-  transition: background-color 300ms;
-  opacity: .3;
+.postpartum-selector {
+  background-image: url('https://github.com/mdzwink/diverseBirthing/blob/main/client/public/images/Postpartum.png?raw=true');
+  background-position: center;
 }
-.healthcare-professional-selector:hover {
-  background-color: var(--home-section-select-hvr);
-}
-.expecting-selector {
-  background-color: var(--home-section-select);
-  transition: background-color 300ms;
-  opacity: .3;
-}
-.expecting-selector:hover {
-  background-color: var(--home-section-select-hvr);
+.pregnancy-care-selector {
+  background-image: url('https://github.com/mdzwink/diverseBirthing/blob/main/client/public/images/Pregnant-care.png?raw=true');
+  background-position: center;
 }
 .family-planning-selector {
-  background-color: var(--home-section-select);
-  transition: background-color 300ms;
-  opacity: .3;
+  background-image: url('https://github.com/mdzwink/diverseBirthing/blob/main/client/public/images/Family-planning.png?raw=true');
+  background-position: center;
 }
-.family-planning-selector:hover {
-  background-color: var(--home-section-select-hvr);
-}
-.map-selector {
-  background-color: var(--home-section-select);
-  transition: background-color 300ms;
-  opacity: .3;
-}
-.map-selector:hover {
-  background-color: var(--home-section-select-hvr);
-}
+
 section div div {
-  background-color: var(--nav-bkgrnd);
-  color: rgb(20, 20, 20, .8);
-  border-radius: 3px;
-  box-shadow: 1px 3px 7px rgb(20, 20, 20, .6);
+  color: black;
   padding: .5em;
   text-align: center;
 }
@@ -249,14 +323,28 @@ section div div {
 section h1.placeholder {
   text-transform: capitalize;
 }
+section.home-pages {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  transition: height 500ms;
+  opacity: .7;
+  background-image: url('https://github.com/mdzwink/diverseBirthing/blob/main/client/public/images/Home-background.png?raw=true');
+  background-position: bottom;
+  background-size: cover;
+  box-shadow: inset 0 -3em 3em rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 section.map {
-  position: relative;
-  top: 13vh;
   width: 100vw;
   max-width: 100%;
   height: 85vh;
-  padding: .5em;
+  padding: 1em;
 }
 
 section.footer {

@@ -10,15 +10,17 @@ import {
 import About from './components/About';
 import Home from './components/Home';
 import Contact from './components/Contact';
-import HealthcareProfessional from './components/HealthcareProfessional';
+import PostpartumCare from './components/PostpartumCare';
 import FamilyPlanning from './components/FamilyPlanning';
-import Expecting from './components/Expecting';
-import LocationsMap from './components/LocationsMap'
+import PregnancyCare from './components/PregnancyCare';
+import LocationsMap from './components/LocationsMap';
+import ErrorPage from "./components/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',
@@ -33,16 +35,16 @@ const router = createBrowserRouter([
         element: <Contact />
       },
       {
-        path: 'healthcare-professional',
-        element: <HealthcareProfessional />
+        path: 'postpartum',
+        element: <PostpartumCare />
       },
       {
         path: 'family-planning',
         element: <FamilyPlanning />
       },
       {
-        path: 'expecting',
-        element: <Expecting />
+        path: 'pregnancy-care',
+        element: <PregnancyCare />
       },
       {
         path: 'map',

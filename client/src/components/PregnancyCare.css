@@ -1,0 +1,49 @@
+section.home-pages .intro {
+  position: absolute;
+  top: 35vh;
+  left: 25%;
+  width: 80ch;
+  max-width: 50vw;
+  transition: max-width 200ms;
+  background-color: rgb(245, 245, 221, .8);
+  padding: 2em;
+  border-radius: 5px;
+}
+section.home-pages div h1 {
+  font-size: 1.5em;
+  font-weight: 800;
+  color: var(--h1);
+  text-align: center;
+}
+section.home-pages div > article {
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--article);
+  line-height: 1.4em;
+}
+
+@media screen and (max-width: 800px) {
+  section.home-pages .intro {
+    top: 20vh;
+    left: 20%;
+    max-width: 60vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  section.home-pages {
+    height: 150vh;
+    transition: height 500ms;
+  }
+  section.home-pages .intro {
+    top: 15vh;
+    left: 12%;
+    max-width: 70vw;
+    transition: height 500ms;
+    padding: 1em;
+  }
+}
+@media screen and (max-width: 300px) {
+  section.home-pages {
+    height: 180vh;
+  }
+}

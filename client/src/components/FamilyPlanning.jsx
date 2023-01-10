@@ -1,7 +1,9 @@
-import './FamilyPlanning.css';
+import '../App.css'
 import library from '../LanguageLib';
 import { useOutletContext } from 'react-router';
 import LocationsMap from './LocationsMap';
+import Footer from './Footer';
+import BackToTop from './BackToTop';
 
 
 const FamilyPlanning = () => {
@@ -9,10 +11,15 @@ const FamilyPlanning = () => {
 
   return (
     <>
-      <section className='family-planning' >
-        <h1 className='placeholder' >{library[language].home.familyPlanning}</h1>
+      <section className='home-pages' >
+        <div className="intro">
+          <h1>{library[language].familyPlanningInfo.introHeader}</h1>
+          <br/>
+          <article>{library[language].familyPlanningInfo.intro}</article>
+        </div>
       </section>
-      <LocationsMap />
+      <Footer />
+      <BackToTop />
     </>
   )
 }

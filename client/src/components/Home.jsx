@@ -4,8 +4,9 @@ import LanguageSelection from "./LanguageSelection";
 
 const Home = (props) => {
 
-  const { language, setLanguage, languagePage, setLanguagePage, setLandingPage } = props;
-  const onSectionClick = () => {
+  const { language, setLanguage, languagePage, setLanguagePage, setNavContent, setLandingPage } = props;
+  const onSectionClick = (selection) => {
+    setNavContent(selection)
     setLandingPage(false);
   }
 
@@ -17,22 +18,19 @@ const Home = (props) => {
       </>
       :
       <>
-        <Link to={'#'} className="home-logo" ><h1>Birthing<br/>Diversity</h1></Link>
+        <Link to={'#'} className="home-logo" ><img src='https://github.com/mdzwink/diverseBirthing/blob/main/client/public/images/BD-logo.png?raw=true' alt='birthing diversity logo' className="nav-logo"/></Link>
         <section className="home-filter" >
-          <Link to={'/family-planning'}>
-            <div className="family-planning-selector" onClick={() => onSectionClick()}>
-              <div>{library[language].home.familyPlanning}</div>
-            </div>
+          <Link to={'/family-planning'} onClick={() => onSectionClick('planning')} >
+            <div className="family-planning-selector" ></div>
+            <h1>{library[language].home.familyPlanning}</h1>
           </Link>
-          <Link to={'/expecting'}>
-            <div className="expecting-selector" onClick={() => onSectionClick()}>
-              <div>{library[language].home.expecting}</div>
-            </div>
+          <Link to={'/pregnancy-care'} onClick={() => onSectionClick('pregnancy')} >
+            <div className="pregnancy-care-selector" ></div>
+            <h1>{library[language].home.pregnancyCare}</h1>
           </Link>
-          <Link to={'/healthcare-professional'}>
-            <div className="healthcare-professional-selector" onClick={() => onSectionClick()}>
-              <div>{library[language].home.healthcareProfessional}</div>
-            </div>
+          <Link to={'/postpartum'} onClick={() => onSectionClick('postpartum')} >
+            <div className="postpartum-selector" id={'postpartum-background'} ></div>
+            <h1>{library[language].home.postpartumCare}</h1>
           </Link>
         </section>
         <h1 className="home-languagePage-toggle" onClick={() => setLanguagePage(true)} >Language<br/>Langue<br/>زبانیں</h1>

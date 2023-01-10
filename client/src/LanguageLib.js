@@ -10,9 +10,21 @@ const library = {
     },
     home: {
       familyPlanning: 'Family Planning',
-      expecting: 'Expecting',
-      healthcareProfessional: 'Healthcare Professional',
+      pregnancyCare: 'Pregnancy Care',
+      postpartumCare: 'Postpartum',
       map: 'map'
+    },
+    familyPlanningInfo: {
+      introHeader: 'Family Planning',
+      intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias esse ex quidem nihil vitae, consectetur porro rerum iure voluptas similique velit reprehenderit cum sapiente optio obcaecati aut, molestiae ipsa dolore.',
+    },
+    pregnancyInfo: {
+      introHeader: 'Pregnancy Care',
+      intro: 'At Birthing Diversity we know being pregnant can be difficult but accessing pregnancy care information shouldn\'t be. Midwives in Ontario are a key resource for valuable information and can provide free care regardless of your immigration status. This website was created as a tool to supplement midwifery care in a language you know so that you are informed every step of the way!',
+    },
+    postpartumInfo: {
+      introHeader: 'Postpartum Care',
+      intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias esse ex quidem nihil vitae, consectetur porro rerum iure voluptas similique velit reprehenderit cum sapiente optio obcaecati aut, molestiae ipsa dolore.',
     }
   },
   'urdu': {
@@ -26,9 +38,21 @@ const library = {
     },
     home: {
       familyPlanning: 'خاندانی منصوبہ',
-      expecting: 'توقع',
-      healthcareProfessional: 'دائی',
+      pregnancyCare: 'توقع',
+      postpartumCare: 'دائی',
       map: 'نقشہ'
+    },
+    familyPlanningInfo: {
+      introHeader: '',
+      intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias esse ex quidem nihil vitae, consectetur porro rerum iure voluptas similique velit reprehenderit cum sapiente optio obcaecati aut, molestiae ipsa dolore.',
+    },
+    pregnancyInfo: {
+      introHeader: 'Pregnancy Care',
+      intro: 'At Birthing Diversity we know being pregnant can be difficult but accessing pregnancy care information shouldn\'t be. Midwives in Ontario are a key resource for valuable information and can provide free care regardless of your immigration status. This website was created as a tool to supplement midwifery care in a language you know so that you are informed every step of the way!',
+    },
+    postpartumInfo: {
+      introHeader: 'Postpartum Care',
+      intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias esse ex quidem nihil vitae, consectetur porro rerum iure voluptas similique velit reprehenderit cum sapiente optio obcaecati aut, molestiae ipsa dolore.',
     }
   },
   'portugise': {
@@ -42,9 +66,21 @@ const library = {
     },
     home: {
       familyPlanning: 'Family Planning',
-      expecting: 'Expecting',
-      healthcareProfessional: 'Healthcare Professional',
+      pregnancyCare: 'Pregnancy Care',
+      postpartumCare: 'Postpartum',
       map: 'map'
+    },
+    familyPlanningInfo: {
+      introHeader: '',
+      intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias esse ex quidem nihil vitae, consectetur porro rerum iure voluptas similique velit reprehenderit cum sapiente optio obcaecati aut, molestiae ipsa dolore.',
+    },
+    pregnancyInfo: {
+      introHeader: 'Pregnancy Care',
+      intro: 'At Birthing Diversity we know being pregnant can be difficult but accessing pregnancy care information shouldn\'t be. Midwives in Ontario are a key resource for valuable information and can provide free care regardless of your immigration status. This website was created as a tool to supplement midwifery care in a language you know so that you are informed every step of the way!',
+    },
+    postpartumInfo: {
+      introHeader: 'Postpartum Care',
+      intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias esse ex quidem nihil vitae, consectetur porro rerum iure voluptas similique velit reprehenderit cum sapiente optio obcaecati aut, molestiae ipsa dolore.',
     }
   },
   "spanish": {
@@ -58,9 +94,21 @@ const library = {
     },
     home: {
       familyPlanning: 'Family Planning',
-      expecting: 'Expecting',
-      healthcareProfessional: 'Healthcare Professional',
+      pregnancyCare: 'Pregnancy Care',
+      postpartumCare: 'Postpartum',
       map: 'map'
+    },
+    familyPlanningInfo: {
+      introHeader: '',
+      intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias esse ex quidem nihil vitae, consectetur porro rerum iure voluptas similique velit reprehenderit cum sapiente optio obcaecati aut, molestiae ipsa dolore.',
+    },
+    pregnancyInfo: {
+      introHeader: 'Pregnancy Care',
+      intro: 'At Birthing Diversity we know being pregnant can be difficult but accessing pregnancy care information shouldn\'t be. Midwives in Ontario are a key resource for valuable information and can provide free care regardless of your immigration status. This website was created as a tool to supplement midwifery care in a language you know so that you are informed every step of the way!',
+    },
+    postpartumInfo: {
+      introHeader: 'Postpartum Care',
+      intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias esse ex quidem nihil vitae, consectetur porro rerum iure voluptas similique velit reprehenderit cum sapiente optio obcaecati aut, molestiae ipsa dolore.',
     }
   },
   "somali": {
@@ -74,9 +122,21 @@ const library = {
     },
     home: {
       familyPlanning: 'Family Planning',
-      expecting: 'Expecting',
-      healthcareProfessional: 'Healthcare Professional',
+      pregnancyCare: 'Pregnancy Care',
+      postpartumCare: 'Postpartum',
       map: 'map'
+    },
+    familyPlanningInfo: {
+      introHeader: '',
+      intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias esse ex quidem nihil vitae, consectetur porro rerum iure voluptas similique velit reprehenderit cum sapiente optio obcaecati aut, molestiae ipsa dolore.',
+    },
+    pregnancyInfo: {
+      introHeader: 'Pregnancy Care',
+      intro: 'At Birthing Diversity we know being pregnant can be difficult but accessing pregnancy care information shouldn\'t be. Midwives in Ontario are a key resource for valuable information and can provide free care regardless of your immigration status. This website was created as a tool to supplement midwifery care in a language you know so that you are informed every step of the way!',
+    },
+    postpartumInfo: {
+      introHeader: 'Postpartum Care',
+      intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias esse ex quidem nihil vitae, consectetur porro rerum iure voluptas similique velit reprehenderit cum sapiente optio obcaecati aut, molestiae ipsa dolore.',
     }
   },
   "ukrainian": {
@@ -90,9 +150,21 @@ const library = {
     },
     home: {
       familyPlanning: 'Family Planning',
-      expecting: 'Expecting',
-      healthcareProfessional: 'Healthcare Professional',
+      pregnancyCare: 'Pregnancy Care',
+      postpartumCare: 'Postpartum',
       map: 'map'
+    },
+    familyPlanningInfo: {
+      introHeader: '',
+      intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias esse ex quidem nihil vitae, consectetur porro rerum iure voluptas similique velit reprehenderit cum sapiente optio obcaecati aut, molestiae ipsa dolore.',
+    },
+    pregnancyInfo: {
+      introHeader: 'Pregnancy Care',
+      intro: 'At Birthing Diversity we know being pregnant can be difficult but accessing pregnancy care information shouldn\'t be. Midwives in Ontario are a key resource for valuable information and can provide free care regardless of your immigration status. This website was created as a tool to supplement midwifery care in a language you know so that you are informed every step of the way!',
+    },
+    postpartumInfo: {
+      introHeader: 'Postpartum Care',
+      intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias esse ex quidem nihil vitae, consectetur porro rerum iure voluptas similique velit reprehenderit cum sapiente optio obcaecati aut, molestiae ipsa dolore.',
     }
   },
   "russian": {
@@ -106,9 +178,21 @@ const library = {
     },
     home: {
       familyPlanning: 'Family Planning',
-      expecting: 'Expecting',
-      healthcareProfessional: 'Healthcare Professional',
+      pregnancyCare: 'Pregnancy Care',
+      postpartumCare: 'Postpartum',
       map: 'map'
+    },
+    familyPlanningInfo: {
+      introHeader: '',
+      intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias esse ex quidem nihil vitae, consectetur porro rerum iure voluptas similique velit reprehenderit cum sapiente optio obcaecati aut, molestiae ipsa dolore.',
+    },
+    pregnancyInfo: {
+      introHeader: 'Pregnancy Care',
+      intro: 'At Birthing Diversity we know being pregnant can be difficult but accessing pregnancy care information shouldn\'t be. Midwives in Ontario are a key resource for valuable information and can provide free care regardless of your immigration status. This website was created as a tool to supplement midwifery care in a language you know so that you are informed every step of the way!',
+    },
+    postpartumInfo: {
+      introHeader: 'Postpartum Care',
+      intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias esse ex quidem nihil vitae, consectetur porro rerum iure voluptas similique velit reprehenderit cum sapiente optio obcaecati aut, molestiae ipsa dolore.',
     }
   },
   "french": {
@@ -122,9 +206,21 @@ const library = {
     },
     home: {
       familyPlanning: 'planification familiale',
-      expecting: 'attendant',
-      healthcareProfessional: 'professionnel de la Santé',
+      pregnancyCare: 'attendant',
+      postpartumCare: 'postpartum',
       map: 'carte'
+    },
+    familyPlanningInfo: {
+      introHeader: '',
+      intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias esse ex quidem nihil vitae, consectetur porro rerum iure voluptas similique velit reprehenderit cum sapiente optio obcaecati aut, molestiae ipsa dolore.',
+    },
+    pregnancyInfo: {
+      introHeader: 'Pregnancy Care',
+      intro: 'At Birthing Diversity we know being pregnant can be difficult but accessing pregnancy care information shouldn\'t be. Midwives in Ontario are a key resource for valuable information and can provide free care regardless of your immigration status. This website was created as a tool to supplement midwifery care in a language you know so that you are informed every step of the way!',
+    },
+    postpartumInfo: {
+      introHeader: 'Postpartum Care',
+      intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias esse ex quidem nihil vitae, consectetur porro rerum iure voluptas similique velit reprehenderit cum sapiente optio obcaecati aut, molestiae ipsa dolore.',
     }
   },
 }
