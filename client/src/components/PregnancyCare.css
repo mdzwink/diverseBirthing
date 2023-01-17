@@ -31,7 +31,7 @@ section.home-pages div > article {
 }
 @media screen and (max-width: 500px) {
   section.home-pages {
-    height: 150vh;
+    height: 100vh;
     transition: height 500ms;
   }
   section.home-pages .intro {

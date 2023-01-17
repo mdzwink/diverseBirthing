@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import LanguageSelection from "./LanguageSelection";
 import './Navbar.css';
@@ -15,12 +14,21 @@ const Navbar = (props) => {
   }
   const handleLandingPageLink = ()=> {
     landingPage ? setLandingPage(false) : setLandingPage(true)
+    setNavMenu(false)
   }
+
+  const handleScreenWidth = () => {
+    const ww = window.innerWidth
+    if (ww < 940) {
+      setNavMenu(false)
+    }
+  }
+  window.addEventListener('resize', handleScreenWidth)
 
   return (
     <header className="nav">
         <nav>
-          <Link to={'#'} onClick={() => handleLandingPageLink()} ><img src='https://github.com/mdzwink/diverseBirthing/blob/main/client/public/images/BD-logo.png?raw=true' alt='birthing diversity logo' className="nav-logo"/></Link>
+          <Link to={'#'} onClick={() => handleLandingPageLink()} ><img src='/images/BD-logo.png' alt='birthing diversity logo' className="nav-logo"/></Link>
           <ul className={navMenu ? 'menu-active' : 'menu-not-active'} >
             {navContent === 'planning' ?
               <>

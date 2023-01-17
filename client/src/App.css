@@ -92,6 +92,9 @@ div.intro-animation .second-part {
 /* Navbar css in 'Navbar.css' */
 
 .back-to-top {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms, visibility 250ms;
   position: fixed;
   bottom: 1em;
   right: 1em;
@@ -102,6 +105,10 @@ div.intro-animation .second-part {
   padding: .4em;
   cursor: pointer;
   user-select: none;
+}
+.back-to-top.active {
+  opacity: 1;
+  visibility: visible;
 }
 .back-to-top:hover {
   box-shadow: 1px 2px 7px rgb(20, 20, 20, .6);
@@ -302,15 +309,15 @@ section.home-filter > a:hover {
 
 
 .postpartum-selector {
-  background-image: url('https://github.com/mdzwink/diverseBirthing/blob/main/client/public/images/Postpartum.png?raw=true');
+  background-image: url('../public/images/Postpartum.png');
   background-position: center;
 }
 .pregnancy-care-selector {
-  background-image: url('https://github.com/mdzwink/diverseBirthing/blob/main/client/public/images/Pregnant-care.png?raw=true');
+  background-image: url('../public/images/Pregnant-care.png');
   background-position: center;
 }
 .family-planning-selector {
-  background-image: url('https://github.com/mdzwink/diverseBirthing/blob/main/client/public/images/Family-planning.png?raw=true');
+  background-image: url('../public/images/Family-planning.png');
   background-position: center;
 }
 
@@ -330,7 +337,7 @@ section.home-pages {
   height: 100vh;
   transition: height 500ms;
   opacity: .7;
-  background-image: url('https://github.com/mdzwink/diverseBirthing/blob/main/client/public/images/Home-background.png?raw=true');
+  background-image: url('../public/images/Home-background.png');
   background-position: bottom;
   background-size: cover;
   box-shadow: inset 0 -3em 3em rgb(255, 255, 255);
