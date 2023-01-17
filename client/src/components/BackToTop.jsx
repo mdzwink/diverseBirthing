@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 const BackToTop = () => {
   const [active, setActive] = useState(false)
   
   const checkScroll = () => {
     const sY = window.scrollY;
-    return sY > 30 ? setActive(true) : setActive(false);
+    const wH = window.innerHeight;
+    return sY > wH / 2 ? setActive(true) : setActive(false);
   }
+
   window.addEventListener('scroll', checkScroll)
 
   const handleTopClick = () => {

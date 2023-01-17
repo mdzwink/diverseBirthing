@@ -1,9 +1,6 @@
 import '../App.css'
 import library from '../LanguageLib';
 import { useOutletContext } from 'react-router';
-import LocationsMap from './LocationsMap';
-import Footer from './Footer';
-import BackToTop from './BackToTop';
 
 
 const FamilyPlanning = () => {
@@ -18,8 +15,6 @@ const FamilyPlanning = () => {
           <article>{library[language].familyPlanningInfo.intro}</article>
         </div>
       </section>
-      <Footer />
-      <BackToTop />
     </>
   )
 }

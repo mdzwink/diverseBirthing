@@ -47,6 +47,12 @@ body {
   height: 100vh;
 }
 
+main {
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
 header.error-page {
   width: 100vw;
   max-width: 100%;

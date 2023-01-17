@@ -7,7 +7,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import About from './components/About';
+import OurTeam from './components/OurTeam';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import PostpartumCare from './components/PostpartumCare';
@@ -27,8 +27,8 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: 'ourTeam',
-        element: <About />
+        path: 'our-team',
+        element: <OurTeam />
       },
       {
         path: 'contact',

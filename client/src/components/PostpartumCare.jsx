@@ -1,9 +1,6 @@
 import '../App.css'
 import library from '../LanguageLib';
 import { useOutletContext } from 'react-router';
-import LocationsMap from './LocationsMap';
-import Footer from './Footer';
-import BackToTop from './BackToTop';
 
 const PostpartumCare = () => {
   const [language] = useOutletContext();
@@ -17,8 +14,6 @@ const PostpartumCare = () => {
           <article>{library[language].postpartumInfo.intro}</article>
         </div>
       </section>
-      <Footer />
-      <BackToTop />
     </>
   )
 }
