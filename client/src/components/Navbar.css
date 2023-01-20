@@ -4,7 +4,7 @@ header.nav {
   left: 0;
   width: 100vw;
   max-width: 100%;
-  height: 11vh;
+  height: 10vh;
   transition: height 200ms;
   display: flex;
   justify-content: center;
@@ -13,11 +13,6 @@ header.nav {
   background-color: var(--nav-bkgrnd);
   z-index: 1000;
   color: var(--nav-text);
-}
-@media screen and (min-height: 800px) {
-  header.nav {
-    height: 13vh;
-  }
 }
 
 header nav {
@@ -35,10 +30,11 @@ header nav {
 
 header nav .nav-logo {
   width: auto;
-  height: 4em;
+  height: 9vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-right: 1em;
 }
 header nav .nav-logo:hover {
   color: #332123;
@@ -59,16 +55,23 @@ header nav ul.menu-button {
 header nav div ul {
   list-style: none;
   margin: 0;
-  width: auto;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   text-transform: capitalize;
 }
 
-header nav div ul > a {
+header nav div ul div {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+
+header nav div ul .right-nav > a,
+header nav div ul .left-nav > a {
   width: 100%;
   height: 100%;
   text-decoration: none;
@@ -105,7 +108,7 @@ header nav ul li:hover {
 
   header nav div.menu-active {
     position: absolute;
-    top: 11vh;
+    top: 10vh;
     right: 0;
     width: 100vw;
     height: 89vh;

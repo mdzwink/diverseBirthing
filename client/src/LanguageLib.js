@@ -2,11 +2,13 @@ const library = {
   'english': {
     navbar: {
       home: 'home',
-      ourTeam: 'our team',
-      contact: 'contact',
-      languages: 'languages',
+      trimesterOne: 'trimester 1',
+      trimesterTwo: 'trimester 2',
+      trimesterThree: 'trimester 3',
       menu: 'menu',
       map: 'map',
+      about: 'about',
+      contact: 'contact',
     },
     home: {
       familyPlanning: 'Family Planning',
@@ -30,11 +32,13 @@ const library = {
   'urdu': {
     navbar: {
       home: 'گھر',
-      ourTeam: 'ہماری ٹیم',
-      contact: 'سوالات',
-      languages: 'زبانیں',
+      trimesterOne: 'trimester 1',
+      trimesterTwo: 'trimester 2',
+      trimesterThree: 'trimester 3',
       menu: 'مینو',
       map: 'نقشہ',
+      about: 'ہماری ٹیم',
+      contact: 'سوالات',
     },
     home: {
       familyPlanning: 'خاندانی منصوبہ',
@@ -58,11 +62,13 @@ const library = {
   'portugise': {
     navbar: {
       home: 'home',
-      ourTeam: 'ourTeam',
-      contact: 'contact',
-      languages: 'languages',
+      trimesterOne: 'trimester 1',
+      trimesterTwo: 'trimester 2',
+      trimesterThree: 'trimester 3',
       menu: 'menu',
       map: 'map',
+      about: 'About',
+      contact: 'contact',
     },
     home: {
       familyPlanning: 'Family Planning',
@@ -86,11 +92,13 @@ const library = {
   "spanish": {
     navbar: {
       home: 'home',
-      ourTeam: 'ourTeam',
-      contact: 'contact',
-      languages: 'languages',
+      trimesterOne: 'trimester 1',
+      trimesterTwo: 'trimester 2',
+      trimesterThree: 'trimester 3',
       menu: 'menu',
       map: 'map',
+      about: 'About',
+      contact: 'contact',
     },
     home: {
       familyPlanning: 'Family Planning',
@@ -114,11 +122,13 @@ const library = {
   "somali": {
     navbar: {
       home: 'home',
-      ourTeam: 'ourTeam',
-      contact: 'contact',
-      languages: 'languages',
+      trimesterOne: 'trimester 1',
+      trimesterTwo: 'trimester 2',
+      trimesterThree: 'trimester 3',
       menu: 'menu',
       map: 'map',
+      about: 'About',
+      contact: 'contact',
     },
     home: {
       familyPlanning: 'Family Planning',
@@ -142,11 +152,13 @@ const library = {
   "ukrainian": {
     navbar: {
       home: 'home',
-      ourTeam: 'ourTeam',
-      contact: 'contact',
-      languages: 'languages',
+      trimesterOne: 'trimester 1',
+      trimesterTwo: 'trimester 2',
+      trimesterThree: 'trimester 3',
       menu: 'menu',
       map: 'map',
+      about: 'About',
+      contact: 'contact',
     },
     home: {
       familyPlanning: 'Family Planning',
@@ -170,11 +182,13 @@ const library = {
   "russian": {
     navbar: {
       home: 'home',
-      ourTeam: 'ourTeam',
-      contact: 'contact',
-      languages: 'languages',
+      trimesterOne: 'trimester 1',
+      trimesterTwo: 'trimester 2',
+      trimesterThree: 'trimester 3',
       menu: 'menu',
       map: 'map',
+      about: 'About',
+      contact: 'contact',
     },
     home: {
       familyPlanning: 'Family Planning',
@@ -198,11 +212,13 @@ const library = {
   "french": {
     navbar: {
       home: 'maison',
-      ourTeam: 'notre équipe',
-      contact: 'contactez',
-      languages: 'langue',
+      trimesterOne: 'trimester 1',
+      trimesterTwo: 'trimester 2',
+      trimesterThree: 'trimester 3',
       menu: 'menu',
       map: 'carte',
+      about: 'notre équipe',
+      contact: 'contactez',
     },
     home: {
       familyPlanning: 'planification familiale',

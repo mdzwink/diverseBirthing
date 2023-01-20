@@ -18,7 +18,7 @@ const Home = (props) => {
       </>
       :
       <>
-        <Link to={'#'} className="home-logo" ><img src='/images/BD-logo.png' alt='birthing diversity logo' className="nav-logo"/></Link>
+        <Link to={'#'} className="home-logo" ><img src='/images/BD-logo2.0.png' alt='birthing diversity logo' className="nav-logo"/></Link>
         <section className="home-filter" >
           <Link to={'/family-planning'} onClick={() => onSectionClick('planning')} >
             <div className="family-planning-selector" ></div>

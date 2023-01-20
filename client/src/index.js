@@ -7,7 +7,6 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import OurTeam from './components/OurTeam';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import PostpartumCare from './components/PostpartumCare';
@@ -15,6 +14,7 @@ import FamilyPlanning from './components/FamilyPlanning';
 import PregnancyCare from './components/PregnancyCare';
 import LocationsMap from './components/LocationsMap';
 import ErrorPage from "./components/ErrorPage";
+import About from './components/About';
 
 const router = createBrowserRouter([
   {
@@ -27,8 +27,8 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: 'our-team',
-        element: <OurTeam />
+        path: 'about',
+        element: <About />
       },
       {
         path: 'contact',
