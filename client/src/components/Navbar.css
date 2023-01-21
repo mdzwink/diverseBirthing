@@ -4,7 +4,7 @@ header.nav {
   left: 0;
   width: 100vw;
   max-width: 100%;
-  height: 10vh;
+  height: 11vh;
   transition: height 200ms;
   display: flex;
   justify-content: center;
@@ -115,7 +115,7 @@ header nav ul li:hover {
     
   }
 
-  header nav div.menu-active ul {
+  header nav div.menu-active > ul {
     width: 100%;
     display: flex;
     flex-direction: column;

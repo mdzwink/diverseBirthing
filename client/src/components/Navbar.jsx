@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import LanguageSelection from "./LanguageSelection";
 import './Navbar.css';
 import library from "../LanguageLib";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPeopleGroup, faMapLocationDot, faBars } from '@fortawesome/free-solid-svg-icons';
+
 
 const Navbar = (props) => {
   const { language, setLanguage, navContent, landingPage, setLandingPage, languagePage, setLanguagePage, navMenu, setNavMenu } = props;
@@ -34,11 +37,10 @@ const Navbar = (props) => {
                   <div className='left-nav'>
                     <Link to={'#'} onClick={() => {handleMenuButtonClick(); handleLandingPageLink();}} ><li>{library[language].navbar.home}</li></Link>
                     <Link to={'/contact'} onClick={() => handleMenuButtonClick()} ><li>{library[language].navbar.contact}</li></Link>
-                    <Link to={'/map'} onClick={() => handleMenuButtonClick()} ><li>{library[language].navbar.map}</li></Link>
                   </div>
                   <div className='right-nav'>
-                    <Link to={'/about'} onClick={() => handleMenuButtonClick()} ><li>(i){library[language].navbar.about}</li></Link>
-                    <Link to={'/#'} onClick={() => handleMenuButtonClick()} ><li>(i){library[language].navbar.contact}</li></Link>
+                    <Link to={'/map'} onClick={() => handleMenuButtonClick()} ><li><FontAwesomeIcon icon={faMapLocationDot} />&nbsp;{library[language].navbar.map}</li></Link>
+                    <Link to={'/about'} onClick={() => handleMenuButtonClick()} ><li><FontAwesomeIcon icon={faPeopleGroup} />&nbsp;{library[language].navbar.about}</li></Link>
                   </div>
                 </>
                 :
@@ -48,18 +50,17 @@ const Navbar = (props) => {
                     <Link to={'#'} onClick={() => handleMenuButtonClick()} ><li>Trimester 1</li></Link>
                     <Link to={'#'} onClick={() => handleMenuButtonClick()} ><li>Trimester 2</li></Link>
                     <Link to={'#'} onClick={() => handleMenuButtonClick()} ><li>Trimester 3</li></Link>
-                    <Link to={'/map'} onClick={() => handleMenuButtonClick()} ><li>{library[language].navbar.map}</li></Link>
                   </div>
                   <div className='right-nav'>
-                    <Link to={'/about'} onClick={() => handleMenuButtonClick()} ><li>(i){library[language].navbar.about}</li></Link>
-                    <Link to={'/#'} onClick={() => handleMenuButtonClick()} ><li>(i){library[language].navbar.contact}</li></Link>
+                    <Link to={'/map'} onClick={() => handleMenuButtonClick()} ><li><FontAwesomeIcon icon={faMapLocationDot} />&nbsp;{library[language].navbar.map}</li></Link>
+                    <Link to={'/about'} onClick={() => handleMenuButtonClick()} ><li><FontAwesomeIcon icon={faPeopleGroup} />&nbsp;{library[language].navbar.about}</li></Link>
                   </div>
                 </>
               }
             </ul>
           </div>
           <ul className="menu-button" >
-            <li onClick={() => handleMenuButtonClick()}>{library[language].navbar.menu}</li>
+            <li onClick={() => handleMenuButtonClick()}><FontAwesomeIcon icon={faBars} />&nbsp;{library[language].navbar.menu}</li>
           </ul>
         </nav>
         {languagePage ?
