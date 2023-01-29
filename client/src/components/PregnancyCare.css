@@ -28,8 +28,7 @@ section.home-pages div > article {
   justify-content: space-between;
   align-items: center;
   padding: 5em;
-  background: linear-gradient(#cabbd8, #c0aed3);
-  z-index: -1;
+  z-index: 1;
 }
 .vid-points {
   height: 30vw;
@@ -45,23 +44,20 @@ section.home-pages div > article {
   width: 50vw;
   height: 30vw;
 }
-.home-vid:hover {
-  cursor: pointer;
-}
 .vid-wrapper {
   position: relative;
-  padding-bottom: 56.25%;
   width: 100%;
   height: 100%;
 }
 iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 9px;
   z-index: 1;
+}
+iframe.active {
+  z-index: 1000;
 }
 .cover-iframe-img {
   position: absolute;
@@ -109,8 +105,9 @@ iframe {
 }
 .cover-iframe-play {
   position: absolute;
-  bottom: .6em;
-  right: .6em;
+  bottom: 0.6em;
+  right: 0.6em;
+  right: -100px;
   width: 80px;
   height: 80px;
   display: flex;
@@ -119,9 +116,16 @@ iframe {
   border: 4px solid rgb(220, 220, 220);
   border-radius: 50%;
   background-color: white;
-  color: #190940;
+  color: #9b8ebf;
   font-size: 40px;
-  z-index: 3;
+  opacity: .9;
+  z-index: 500;
+  transition: all 300ms;
+}
+.cover-iframe-play:hover {
+  cursor: pointer;
+  color: var(--bd-dark-purple);
+  opacity: 1;
 }
 
 

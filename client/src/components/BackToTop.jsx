@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+
 const BackToTop = () => {
   const [active, setActive] = useState(false)
   
@@ -16,7 +19,7 @@ const BackToTop = () => {
 
   return (
     <>
-        <div className={active ? 'back-to-top active' : 'back-to-top'} onClick={() => handleTopClick()} >Back<br/>To<br/>Top</div>
+        <div className={active ? 'back-to-top active' : 'back-to-top'} onClick={() => handleTopClick()} ><div className='top-arrow'><FontAwesomeIcon icon={faArrowUp} /></div></div>
     </>
   )
 }

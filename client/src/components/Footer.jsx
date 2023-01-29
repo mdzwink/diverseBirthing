@@ -1,12 +1,22 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPeopleGroup, faMapLocationDot, faLanguage, faEnvelope, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { faPeopleGroup, faMapLocationDot, faLanguage, faEnvelope, faCopy, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = (props) => {
   const { setLanguagePage } = props;
+  const [copyState, setCopyState] = useState(false);
+  const [hoverEmailActive, setHoverEmailActive] = useState(false);
+  const email = 'birthingdiversity@gmail.com';
 
   const navigate = useNavigate();
+  const handleFootClick = () => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }
+  const handleHover = (text) => {
+    
+  }
 
   return (
     <section className="footer">
@@ -19,10 +29,28 @@ const Footer = (props) => {
       </div>
       <div className='footer-nav'>
         <ul>
-          <li className='nav' onClick={() => navigate('/map')} >Map&nbsp;<FontAwesomeIcon icon={faMapLocationDot} /></li>
-          <li className='nav' onClick={() => navigate('/about')} >About&nbsp;<FontAwesomeIcon icon={faPeopleGroup} /></li>
+          <li className='nav' onClick={() => {navigate('/map'); handleFootClick()}} >Map&nbsp;<FontAwesomeIcon icon={faMapLocationDot} /></li>
+          <li className='nav' onClick={() => {navigate('/about'); handleFootClick()}} >About&nbsp;<FontAwesomeIcon icon={faPeopleGroup} /></li>
           <li className='nav' onClick={() => setLanguagePage(true)} >Language&nbsp;<FontAwesomeIcon icon={faLanguage} /></li>
-          <li>Contact us at:&nbsp;<FontAwesomeIcon icon={faEnvelope} /> <strong>birthingdiversity@gmail.com</strong></li>
+          <li className='contact-us' >
+            <div>Contact us at:&nbsp;</div>
+            <div>
+            <div className='email-client'
+              onMouseEnter={() => {handleHover('Click to open email'); setHoverEmailActive(true)}} 
+              onMouseLeave={() => {handleHover(''); setHoverEmailActive(false)}} >
+                <a href={`mailto:${email}`}><strong>{email}</strong>&nbsp;<FontAwesomeIcon icon={faEnvelope} /></a>
+                <div className={hoverEmailActive ? "hover-context active" : 'hover-context'}>Open email<div></div></div>
+            </div>
+            &nbsp;
+            <div className='email-copy'
+              onClick={() => {navigator.clipboard.writeText(email); setCopyState('clicked')}} 
+              onMouseEnter={() => {handleHover('Click to copy email'); setCopyState('hover')}}  
+              onMouseLeave={() => {handleHover(''); setCopyState(false)}} ><FontAwesomeIcon icon={faCopy} />
+              <div className={copyState === 'hover' ? 'hover-context active' : 'hover-context'}>Copy email<div></div></div>
+              <div className={copyState === 'clicked' ? 'hover-context active' : 'hover-context'}>Email copied!<div></div></div>
+            </div>
+            </div>
+          </li>
         </ul>
       </div>
     </section>

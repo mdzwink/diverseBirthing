@@ -5,18 +5,19 @@ main.about-container {
   justify-content: center;
   align-items: center;
 }
-section.home-pages {
+section.home-pages.about {
   height: 75vh;
 }
 section.our-team-section {
   width: 100vw;
+  max-width: 100%;
   height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(245, 234, 219);
-  color: var(--bd-dark-blue);
+  background-color: rgb(255, 255, 255);
+  color: var(--bd-dark-purple);
   padding: 5em;
 }
 .our-team-container {
@@ -27,6 +28,7 @@ section.our-team-section {
   justify-content: center;
   align-items: center;
   font-size: large;
+  background-color: antiquewhite;
 }
 .our-team-container > div {
   width: 100%;
@@ -38,20 +40,34 @@ section.our-team-section {
   justify-content: space-evenly;
   align-items: center;
   border-radius: 9px;
-  border: 2px solid var(--bd-dark-blue);
+  border: 2px solid var(--bd-dark-purple);
   padding-bottom: .5em;
 }
-.about-h {
+.avatar {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-color: var(--bd-mango);
+}
+.our-team h1 {
   width: 100%;
   padding: 1em;
-  background-color: var(--bd-dark-blue);
+  background-color: var(--bd-dark-purple);
   color: #fff;
   font-size: 2em;
   text-align: center;
 }
+.our-team h3 {
+  text-align: center;
+  padding: .5em;
+  margin: .5em;
+  background-color: var(--bd-dark-purple);
+  color: white;
+  border-radius: 9px;
+}
 .team-tables {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 .team-tables table th {
   font-size: 1.5em;
@@ -61,29 +77,32 @@ section.our-team-section {
 .team-tables table td {
   padding: .5em;
 }
-.avatar {
-  width: 2em;
-  height: 2em;
-  border-radius: 50%;
-  background-image: url(../../public/images/avatar_missing.png);
-  background-position: center;
-  background-size: cover;
+table.peer {
+  text-align: start;
 }
-.contact-us {
-  text-align: center;
-  padding: 2em 0 0 0;
-}
-.peer-reviewer-ack {
+main.about-container .contact-us {
   width: 20vw;
   height: fit-content;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
   border-radius: 9px;
-  background-color: var(--bd-dark-blue);
-  color: #fff;
+  background-color: var(--bd-dark-purple);
+  color: white;
+  text-align: center;
   font-size: .8em;
-  font-weight: 200;
+  font-weight: bold;
   padding: 1.5em;
+  margin-top: 1em;
+}
+
+@media screen and (max-width: 850px) {
+  section.our-team-section {
+    flex-direction: column;
+  }
+  .our-team-container,
+  .contact-us {
+    width: 80vw;
+  }
+
 }

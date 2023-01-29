@@ -3,7 +3,7 @@ section.footer {
   max-width: 100%;
   height: fit-content;
   min-height: 5px;
-  background-color: var(--footer-bkgrnd);
+  background-color: var(--footer-BG);
   color: black;
   padding: 1.2em 7vw;
   display: flex;
@@ -11,13 +11,19 @@ section.footer {
   justify-content: space-between;
   align-items: center;
 }
+section.footer .footer-ack,
+section.footer .footer-nav {
+  width: 45vw;
+  height: auto;
+}
+/* footer Birthing Diversity name */
 .footer-BD {
   font-size: 1.4em;
   line-height: .9em;
 }
+/* footer land acknowleedgment box */
 .footer-land-acknowledgment {
-  width: 50ch;
-  max-width: 55vw;
+  max-width: 60ch;
   display: flex;
   align-items: center;
   text-align: left;
@@ -29,29 +35,115 @@ section.footer {
 }
 .footer-ack div a:link,
 .footer-ack div a:visited {
-  color: #392F5A;
+  color: #114166;
 }
 .footer-ack div a:hover {
-  font-size: 2em;
+  font-weight: bold;
 }
-.footer-ack div a:hover {
-  font-size: 2em;
-}
+/* footer navigation links and contact */
 
-.footer-nav {
+.footer-nav,
+.footer-nav ul {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
   line-height: 1.6em;
   text-align: end;
-  font-size: 1em;
-}
-.footer-nav ul {
   list-style: none;
 }
-
 .footer-nav ul > li.nav:hover {
   cursor: pointer;
   font-size: 1.2em;
+}
+/* contact us component - needs to be refactored */
+.footer-nav ul li.contact-us a,
+.footer-nav ul li.contact-us {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: black;
+  padding: 0;
+  font-size: .9em;
+}
+.footer-nav ul li.contact-us .email-client {
+  position: relative;
+}
+.footer-nav ul li.contact-us .email-copy {
+  position: relative;
+}
+
+.footer-nav ul li.contact-us .hover-context {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: none;
+  flex-direction: row;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  padding: .3em .7em;
+  font-size: .8em;
+  font-weight: bold;
+  user-select: none;
+}
+.footer-nav ul li.contact-us .hover-context > div {
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  z-index: 3;
+}
+
+.footer-nav ul li.contact-us .hover-context.active{
+  display: flex;
+}
+.footer-nav ul li.contact-us a:hover {
+  color: var(--bd-light-blue);
+  transition: color 200ms;
+}
+.footer-nav ul li .email-copy:hover {
+  cursor: pointer;
+  color: white;
+  transition: color 200ms;
+}
+.footer-nav ul li.contact-us > div,
+.footer-nav ul li.contact-us div > a,
+.footer-nav ul li.contact-us div > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media screen and (max-width: 840px) {
+  .footer-nav ul li.contact-us {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  section.footer {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  section.footer,
+  section.footer .footer-ack > div,
+  section.footer .footer-nav ul,
+  section.footer .footer-nav ul li.contact-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  section.footer .footer-ack,
+  section.footer .footer-nav {
+    width: 90vw;
+    padding-bottom: 1.2em;
+  }
 }

@@ -47,9 +47,15 @@ const Navbar = (props) => {
                 <>
                   <div className='left-nav'>
                     <Link to={'#'} onClick={() => {handleMenuButtonClick(); handleLandingPageLink();}} ><li>{library[language].navbar.home}</li></Link>
-                    <Link to={'#'} onClick={() => handleMenuButtonClick()} ><li>Trimester 1</li></Link>
-                    <Link to={'#'} onClick={() => handleMenuButtonClick()} ><li>Trimester 2</li></Link>
-                    <Link to={'#'} onClick={() => handleMenuButtonClick()} ><li>Trimester 3</li></Link>
+                    <Link to={'#'} onClick={() => handleMenuButtonClick()} ><li>{library[language].navbar.trimesterOne}
+                      <ul>
+                        <li>test dropdown</li>
+                        <li>test dropdown</li>
+                        <li>test dropdown</li>
+                      </ul>
+                    </li></Link>
+                    <Link to={'#'} onClick={() => handleMenuButtonClick()} ><li>{library[language].navbar.trimesterTwo}</li></Link>
+                    <Link to={'#'} onClick={() => handleMenuButtonClick()} ><li>{library[language].navbar.trimesterThree}</li></Link>
                   </div>
                   <div className='right-nav'>
                     <Link to={'/map'} onClick={() => handleMenuButtonClick()} ><li><FontAwesomeIcon icon={faMapLocationDot} />&nbsp;{library[language].navbar.map}</li></Link>

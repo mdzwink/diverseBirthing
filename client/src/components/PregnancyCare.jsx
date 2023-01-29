@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../App.css';
 import './PregnancyCare.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,7 +8,11 @@ import { useOutletContext } from 'react-router';
 
 const PregnancyCare = () => {
   const [language] = useOutletContext();
+  const [iframeActive, setIframeActive] = useState(false);
 
+  const handleIframeCoverClick = () => {
+
+  }
 
 
   return (
@@ -19,27 +23,19 @@ const PregnancyCare = () => {
           <br/>
           <article>{library[language].pregnancyInfo.intro}</article>
         </div>
+            <iframe className={iframeActive ? "active" : "inactive"} src="https://www.youtube.com/embed/g-Ea9yt74Bo" title="Welcome to Midwifery in Canada" allowFullScreen></iframe>
       </section>
       <section className="home-introduction">
         <div className="home-vid">
           <div className="vid-wrapper">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/g-Ea9yt74Bo" title="Welcome to Midwifery in Canada" frameborder="0" allow=" autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe className={iframeActive ? "active" : "inactive"} src="https://www.youtube.com/embed/KIOelF8DKC8" title="Nursing vs Midwifery: Which Career is Right For Me?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <div className="cover-iframe-color"></div>
             <div className="cover-iframe-img"></div>
             <div className="cover-iframe-top-container" >
               <div className="cover-iframe-title">Birthing Diversity, an introduction.</div>
-              <div className="cover-iframe-play"><FontAwesomeIcon icon={faPlay} /></div>
+              <div className="cover-iframe-play" onClick={() => {setIframeActive(true); console.log('play clicked!')}}><FontAwesomeIcon icon={faPlay} /></div>
             </div>
           </div>
-        </div>
-        <div className="vid-points">
-          <ul>
-            <li>stuff</li>
-            <li>stuff</li>
-            <li>stuff</li>
-            <li>stuff</li>
-            <li>stuff</li>
-          </ul>
         </div>
       </section>
     </main>

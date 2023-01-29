@@ -1,12 +1,46 @@
 import './About.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import TeamMember from './TeamMember';
 
 const About = () => {
+  const ourTeam = [
+      {
+        name: 'Momina Khan',
+        title: '(Midwifery Student, Toronto Metropoliten University)',
+        advisor: 'Manavi Handa (Midwife)'
+      },
+      {
+        name: 'Ana Tomohiro',
+        title: '(Social Worker)',
+        advisor: ''
+      },
+      {
+        name: 'Alina Dekhtiarenko',
+        title: '(Midwifery Student, Toronto Metropoliten University)',
+        advisor: 'Manavi Handa (Midwife)'
+      },
+      {
+        name: 'Angie Amezquita',
+        title: '(Midwifery Student, Toronto Metropoliten University)',
+        advisor: 'Manavi Handa (Midwife)'
+      },
+      {
+        name: 'Yasmin Ahmed',
+        title: '(Midwifery Student, Toronto Metropoliten University)',
+        advisor: 'Manavi Handa (Midwife)'
+      },
+  ]
+
+  const peerRev = [
+    'name', 'name'
+  ]
+
+
   return (
     <main className="about-container">
       
-      <section className='home-pages' >
+      <section className='home-pages about' >
         <div className="intro" id='about-intro'>
           <h1>"At Birthing Diversity, we're striving to put "care" back into healthcare."</h1>
         </div>
@@ -17,7 +51,7 @@ const About = () => {
         <div className="our-team-container">
 
           <div className='our-team' >
-            <h1 className="about-h">Our Team</h1>
+            <h1>Our Team</h1>
             
             <div className="team-tables">
               <table>
@@ -25,47 +59,42 @@ const About = () => {
                   <tr>
                     <th></th>
                     <th>Team members</th>
+                    <th></th>
                     <th>Advisors</th>
                   </tr>
                 </thead>
-                  <tr>
-                    <td><div className="avatar"></div></td>
-                    <td>&nbsp;Momina Khan</td>
-                    <td>Manavi Handa (Midwife)</td>
-                  </tr>
-                  <tr>
-                    <td><div className="avatar"></div></td>
-                    <td>&nbsp;Ana Tomohiro (Social Worker)</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><div className="avatar"></div></td>
-                    <td>&nbsp;Alina Dekhtiarenko (Midwifery Student, TMU)</td>
-                    <td>Manavi Handa (Midwife)</td>
-                  </tr>
-                  <tr>
-                    <td><div className="avatar"></div></td>
-                    <td>&nbsp;Angie Amezquita (Midwifery Student, TMU)</td>
-                    <td>Manavi Handa (Midwife)</td>
-                  </tr>
-                  <tr>
-                    <td><div className="avatar"></div></td>
-                    <td>&nbsp;Yasmin Ahmed (Midwifery Student, TMU)</td>
-                    <td>Manavi Handa (Midwife)</td>
-                  </tr>
+                <tbody>
+                  {ourTeam.map((member) => (
+                    <tr>
+                      {<TeamMember member={member} />}
+                    </tr>
+                  ))}
+
+                </tbody>
               </table>
+              <h3>Special Thanks to Our Translation Peer Reviewers</h3>
+              <table className='peer' >
+                <tbody>
+                  {peerRev.map(peer => (
+                    <tr>
+                      <td><div className="avatar"></div></td>
+                      <td>{peer}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              
             </div>
           </div>
 
-          <div className="contact-us">Want to get in touch? We'd love to hear from you!<br/><FontAwesomeIcon icon={faEnvelope} />&nbsp;birthingdiversity@gmail.com</div>
 
         </div>
 
-        <div className="peer-reviewer-ack">
-          <h3>Special Thanks to Our Translation Peer Reviewers</h3>
+        <div className="contact-us">
+          Want to get in touch?<br/>We'd love to hear from you!<br/><p><FontAwesomeIcon icon={faEnvelope} />&nbsp;birthingdiversity@gmail.com</p>
         </div>
+        
       </section>
-
     </main>
   )
 }
